@@ -1,0 +1,32 @@
+
+*{ text-align: center;
+  color: blue;
+  backgroud-color: grey;
+  font-family: "Arial Narrow";
+  font-size: 25px;
+}
+
+h1 {
+text-align: center;
+color: red;
+}
+
+h2 {
+text-align: center;
+color: purple;
+}
+
+p {
+text-align: center;
+color: black;
+}
+
+.heading {
+text-align: center;
+color: deeppink;
+}
+
+#comment1 {
+text-align: center;
+backgroud-color: blue;
+}

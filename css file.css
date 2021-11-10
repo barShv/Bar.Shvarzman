@@ -1,15 +1,28 @@
 
+:root {   /* אני מגדירה משתנה של צבע בעצם וכך יהיה לי יותר קל להשתמש בזה בהמשך במקום לציין מספרים של צבע אציין פשוט את השם של המשתנה שהגדרתי*/
+    --goodColor: #DC143C;
+    --golden: #66CDAA;
+}
+
+
+
 *{ text-align: center;
   color: blue;
-  backgroud-color: grey;
+  backgroud-color: var(--golden);  /* שימוש בצבע שהגדרתי כמשתנה בהתחלה*/
   font-family: "Arial Narrow";
   font-size: 25px;
 }
 
 h1 {
-text-align: center;
-color: red;
+    color: var(--golden);
+    text-align: center;
+    color: rgb(100,500,12)
 }
+
+body{
+    backgroud-color: green;
+}
+
 
 h2 {
 text-align: center;
@@ -21,7 +34,7 @@ text-align: center;
 color: black;
 }
 
-.heading {
+.heading {     /* עיצוב של class */
 text-align: center;
 color: deeppink;
 }
@@ -29,4 +42,67 @@ color: deeppink;
 #comment1 {
 text-align: center;
 backgroud-color: blue;
+}
+
+label {
+ text-align: center;
+ color: black;
+  margin: 10px;
+  border: 2px solid black;
+}
+
+input {    /* עיצוב של אינפוטים בטופס */
+  text-align: center;
+  color: black;
+  margin: 10px;
+  border: 2px solid black;
+}
+
+#signInHeader {
+    text-align: center;
+    color: yellow;
+    font-family: David;
+}
+
+a:link {    /* עיצוב של לינק מקורי */
+    color: black;
+}
+
+a:visited {   /* עיצוב של לינק אחרי שלחצו עליו */
+    color: green;
+}
+
+/* GRID */
+#gridContainer {   /*הגדרה של גריד- הצורה הכי קלה שעליה היא ממליצה */
+    display: grid;
+    grid-template-areas:
+    'header header header'   /*שמנו שלושה אייטמים בשורה הראשונה וזה מחייב גם בשורות הבאות לשים אותה כמות. זה בעצם עכשיו הגדיר שזה 3 טורים */
+    'left main main'
+    'left main main';
+}
+
+#item1 {
+    grid-area: header;   /*נותנים שמות לכל אייטם */
+}
+
+#item2 {
+    grid-area: left;
+}
+#item3 {
+    grid-area: main;
+}
+
+div div {
+    height: 100px;
+    width: 200px;
+    padding:20px;
+    margin: 20px;
+    background-color: blue;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+       backgroud-color: yellow
+    }
 }
